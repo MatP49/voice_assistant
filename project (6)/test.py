@@ -44,8 +44,8 @@ def speech2text():
         file = reco.listen(s)
     data="error"
     try:
-        print(reco.recognize_google(file))
-        data = reco.recognize_google(file)
+        print(reco.recognize_sphinx(file))
+        data = reco.recognize_sphinx(file)
         send2website(data)
     except sr.UnknownValueError:
         print("audio not recognized, please retry")
